@@ -21,6 +21,7 @@
   "author": "max ogden",
   "license": "BSD",
   "dependencies": {
+    "JSONStream": "^0.8.4",
     "ldjson-stream": "^1.1.0",
     "merge-object-streams": "0.0.3",
     "request": "^2.36.0"
