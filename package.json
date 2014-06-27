@@ -1,0 +1,17 @@
+{
+  "name": "json-merge",
+  "version": "1.0.0",
+  "bin": "cli.js",
+  "description": "given two streams of newline delimited JSON data perform a merge/extend on each object in the stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "cat foobar.json | json-merge \"data.*.a\" \"data.*.b\""
+  },
+  "author": "max ogden",
+  "license": "BSD",
+  "dependencies": {
+    "ldjson-stream": "^1.1.0",
+    "merge-object-streams": "0.0.3",
+    "request": "^2.36.0"
+  }
+}

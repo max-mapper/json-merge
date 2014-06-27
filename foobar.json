@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "a": {
+        "all": "lowercase"
+      },
+      "b": {
+        "ALL": "CAPS"
+      }
+    }
+  ]
+}
