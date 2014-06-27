@@ -1,8 +1,19 @@
 {
   "name": "json-merge",
   "version": "1.0.0",
-  "bin": "cli.js",
+  "bin": {
+    "json-merge": "cli.js"
+  },
   "description": "given two streams of newline delimited JSON data perform a merge/extend on each object in the stream",
+  "keywords": [
+    "stream",
+    "ldjson",
+    "ndjson",
+    "newline",
+    "parsing",
+    "cli",
+    "command-line"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "cat foobar.json | json-merge \"data.*.a\" \"data.*.b\""
@@ -13,5 +24,14 @@
     "ldjson-stream": "^1.1.0",
     "merge-object-streams": "0.0.3",
     "request": "^2.36.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/json-merge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxogden/json-merge/issues"
+  },
+  "homepage": "https://github.com/maxogden/json-merge"
 }
