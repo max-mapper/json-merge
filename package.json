@@ -16,7 +16,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "cat foobar.json | json-merge \"data.*.a\" \"data.*.b\""
+    "test": "cat foobar.json | json-merge \"data.*.a\" \"data.*.b\" \"data.*.c\""
   },
   "author": "max ogden",
   "license": "BSD",

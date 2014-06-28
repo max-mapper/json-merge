@@ -9,10 +9,10 @@ var JSONStream = require('JSONStream')
 run()
 
 function run() {
-  if (!process.argv[2] || !process.argv[3]) return console.error('Usage: json-merge <source1> <source2>')
-  var first = getStream(process.argv[2])
-  var second = getStream(process.argv[3])
-  var merger = merge(first, second)
+  if (!process.argv[2] || !process.argv[3])
+    return console.error('Usage: json-merge <source1> <source2> [<source3>...]')
+  var streams = process.argv.splice(2).map(getStream);
+  var merger = merge(streams)
   merger.pipe(ldj.serialize()).pipe(process.stdout)
 }
 
