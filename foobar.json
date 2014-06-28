@@ -6,6 +6,9 @@
       },
       "b": {
         "ALL": "CAPS"
+      },
+      "c": {
+        "All": "Propercase"
       }
     }
   ]

@@ -1,6 +1,6 @@
 # json-merge
 
-given two streams of newline delimited JSON data perform a merge/extend on each object in the stream
+given multiple streams of newline delimited JSON data perform a merge/extend on each object in the stream
 
 [![NPM](https://nodei.co/npm/json-merge.png?global=true)](https://nodei.co/npm/json-merge/)
 ![dat](http://img.shields.io/badge/Development%20sponsored%20by-dat-green.svg?style=flat)
@@ -9,7 +9,7 @@ given two streams of newline delimited JSON data perform a merge/extend on each 
 
 ```
 npm install json-merge -g
-json-merge <source1> <source2>
+json-merge <source1> <source2> [<source3>...]
 ```
 
 sources can be one of 3 things:
