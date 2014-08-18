@@ -9,7 +9,10 @@ given multiple streams of newline delimited JSON data perform a merge/extend on 
 
 ```
 npm install json-merge -g
-json-merge <source1> <source2> [<source3>...]
+Usage: json-merge <source1> [options] <source2> [options] [<source3>...]
+
+Options
+--parse=<s>	 Parse the precedent source with <s>
 ```
 
 sources can be one of 3 things:
@@ -78,3 +81,41 @@ would output:
 ```
 {"all":"lowercase","ALL":"CAPS"}
 ```
+
+### Parsing different sources
+
+A given a file `food1.json`:
+
+```
+{
+  "salty": 
+    {
+      "tacos": "muybien",
+      "pretzel": "jawohl"
+    }
+}
+
+```
+
+and a file `food2.json`:
+
+```
+{
+  "sweet":
+    {
+      "waffle": "delicious",
+      "pancake": "yummy"
+    }
+}
+```
+
+then running:
+
+```
+json-merge food1.json --parse="salty" food2.json --parse="sweet"
+```
+
+would output:
+
+```
+{"tacos":"muybien","pretzel":"jawohl","waffle":"delicious","pancake":"yummy"}

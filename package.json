@@ -16,7 +16,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "cat foobar.json | json-merge \"data.*.a\" \"data.*.b\" \"data.*.c\""
+    "test": "npm run pipe-test && npm run parse-test",
+    "pipe-test": "cat foobar.json | json-merge \"data.*.a\" \"data.*.b\" \"data.*.c\"",
+    "parse-test": "json-merge foobar.json --parse=\"data.*.a\" foobar.json --parse=\"data.*.b\""
   },
   "author": "max ogden",
   "license": "BSD",
