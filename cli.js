@@ -13,12 +13,16 @@ function run() {
     var usage = 'Usage: json-merge <source1> [options] <source2> [options] [<source3>...]'
     usage += '\n\nOptions'
     usage += '\n--parse=<s>\t Parse the precedent source with <s>'
+    usage += '\n--parse=true\t Parse the precedent source with JSONStream'
     console.error(usage)
   }
 
   var args = process.argv.splice(2).reduce(function (sources, current, cb) {
+    var parse;
     if(current.match(/^--parse=/)) {
-      sources.push({uri: sources.pop().uri, parse: current.substring(8)})
+      parse = current.substring(8);
+      if(parse === "true") parse = true;
+	  sources.push({uri: sources.pop().uri, parse: parse })
     } else {
       sources.push({uri: current})
     }
