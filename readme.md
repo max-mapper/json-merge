@@ -13,6 +13,7 @@ Usage: json-merge <source1> [options] <source2> [options] [<source3>...]
 
 Options
 --parse=<s>	 Parse the precedent source with <s>
+--parse=true	Parse the precedent source with JSONStream
 ```
 
 sources can be one of 3 things:
@@ -20,6 +21,7 @@ sources can be one of 3 things:
 - paths to newline-delimited json data files
 - HTTP uris that return newline-delimited json data
 - JSONStream selector syntax to be used to parse stdin into a stream of JS objects
+- Any of the above in standard JSON form with `--parse=true`
 
 ## examples
 
